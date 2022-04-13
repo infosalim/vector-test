@@ -1,11 +1,29 @@
 import React from 'react';
-import BasicButtonGroup from './components/Btn';
+import {
+  Routes,
+  Route,
+  Navigate
+} from "react-router-dom";
+import Layout from './components/layout/Layout';
+
+import Stake from './components/Stake';
+import Claim from './components/Claim';
+import Lock from './components/Lock';
 
 function App() {
   return (
-    <div className="App text-green-600">
-      <BasicButtonGroup />
-    </div>
+    <Layout>
+      <Routes>
+        <Route path="/stake" element={<Stake />} />
+        <Route path="/claim" element={<Claim />} />
+        <Route path="/lock" element={<Lock />} />
+        <Route
+          path="*"
+          element={<Navigate to="/stake" replace />}
+        />
+      </Routes>
+    </Layout>
+
   );
 }
 
