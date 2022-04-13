@@ -5,7 +5,7 @@
 
 const Claim = () => {
     return (<>
-        <h1>This is Claim</h1>
+        <h1 className='p-12'>This is Claim</h1>
     </>);
 }
 

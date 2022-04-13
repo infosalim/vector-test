@@ -5,7 +5,7 @@
 
 const Stake = () => {
     return (<>
-        <h1>This is Stake</h1>
+        <h1 className='p-12'>This is Stake</h1>
     </>);
 }
 
